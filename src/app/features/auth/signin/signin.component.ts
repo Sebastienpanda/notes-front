@@ -1,7 +1,7 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { bootstrapEye, bootstrapEyeSlash, bootstrapInfoCircle } from '@ng-icons/bootstrap-icons';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { ButtonComponent } from '@shared/components/ui/button/button.component';
@@ -15,6 +15,8 @@ import { ButtonComponent } from '@shared/components/ui/button/button.component';
     styleUrl: './signin.component.scss',
 })
 export class SigninComponent {
+    constructor(private router: Router) {}
+
     form = new FormGroup({
         email: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [Validators.required]),
@@ -29,6 +31,7 @@ export class SigninComponent {
     onSubmit() {
         if (this.form.valid) {
             console.log('Formulaire soumis', this.form.value);
+            this.router.navigate(['/']);
         } else {
             console.log('Formulaire invalide');
         }
