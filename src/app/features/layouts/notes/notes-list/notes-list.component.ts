@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { Note, NoteService } from '@core/services/note.service';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Note } from '@core/services/note.service';
 import { EmptyStateComponent } from '@shared/components/emptyState/empty-state.component';
 import { ButtonComponent } from '@shared/components/ui/button/button.component';
 import { FormatDatePipe } from '@shared/pipes/format-date.pipe';
@@ -12,17 +12,20 @@ import { FormatDatePipe } from '@shared/pipes/format-date.pipe';
     styleUrl: './notes-list.component.scss',
     imports: [CommonModule, EmptyStateComponent, FormatDatePipe, ButtonComponent],
 })
-export class NotesListComponent implements OnInit {
-    constructor(private noteService: NoteService) {}
-    notes: Note[] = [];
-
-    ngOnInit() {
-        this.noteService.getNotes().subscribe(data => {
-            this.notes = data;
-        });
-    }
+export class NotesListComponent {
+    @Input() notes: Note[] = [];
+    @Input() activeNote: Note | null = null;
+    @Output() noteSelected = new EventEmitter<Note>();
 
     trackById(index: number, note: { id: number }): number {
         return note.id;
+    }
+
+    onNoteClick(note: Note) {
+        this.noteSelected.emit(note);
+    }
+
+    isNoteActive(note: Note): boolean {
+        return this.activeNote?.id === note.id;
     }
 }

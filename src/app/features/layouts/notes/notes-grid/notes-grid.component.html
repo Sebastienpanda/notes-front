@@ -7,10 +7,15 @@
     </header>
     <div class="main-content">
         <section class="notes-list">
-            <app-notes-list></app-notes-list>
+            <app-notes-list
+                [notes]="notes"
+                [activeNote]="selectedNote"
+                (noteSelected)="onSelect($event)"></app-notes-list>
         </section>
 
-        <section class="note-content" *ngIf="notes.length > 0">note content</section>
+        <section class="note-content" *ngIf="notes.length > 0">
+            <app-note-content [note]="selectedNote"></app-note-content>
+        </section>
 
         <section class="extra-content" *ngIf="notes.length > 0">extra content</section>
     </div>

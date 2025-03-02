@@ -1,8 +1,77 @@
 .section-notes-list {
-    padding: 0 32px;
-    margin-top: 20px;
+    height: calc(100dvh - 81px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 
-    .empty {
+    .button-wrapper {
+        margin-top: 20px;
+        padding: 0 24px;
+    }
+
+    .notes-container {
+        flex: 1;
+        overflow-y: scroll;
+        padding: 0 24px;
+        scroll-behavior: smooth;
         margin-top: 16px;
+        padding-bottom: 20px;
+
+        .note {
+            .child {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding: 8px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background-color 300ms ease-in-out;
+
+                &:hover {
+                    background: #f5f5f5;
+                }
+
+                &.active {
+                    background: var(--neutral-100);
+                }
+
+                .tags {
+                    display: flex;
+                    gap: 4px;
+                }
+
+                .tag {
+                    background-color: var(--neutral-200);
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    color: var(--neutral-950);
+                }
+
+                .date {
+                    color: var(--neutral-700);
+                    font-size: 12px;
+                    line-height: 120%;
+                    letter-spacing: -0.2px;
+                }
+            }
+
+            .separator {
+                height: 1px;
+                background-color: var(--neutral-200);
+                margin-top: 12px;
+                opacity: 1;
+                transition:
+                    opacity 300ms ease-in-out,
+                    height 300ms ease-in-out,
+                    margin-top 300ms ease-in-out;
+            }
+
+            .child.active + .separator {
+                opacity: 0;
+                height: 0;
+                margin-top: 0;
+            }
+        }
     }
 }

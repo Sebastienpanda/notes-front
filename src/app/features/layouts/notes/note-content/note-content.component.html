@@ -1,0 +1,7 @@
+<div class="note-content-wrapper" *ngIf="note">
+    <h2>{{ note.title }}</h2>
+    <div class="tags">
+        <span *ngFor="let tag of note.tags" class="tag">{{ tag }}</span>
+    </div>
+    <div class="content"></div>
+</div>
