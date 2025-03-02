@@ -71,7 +71,7 @@
         cursor: not-allowed;
 
         &:hover {
-            background: inherit;
+            background-color: var(--neutral-100);
         }
     }
 }
