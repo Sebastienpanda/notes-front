@@ -1,0 +1,13 @@
+<nav class="bottom-nav">
+    <ng-container *ngFor="let item of navItems; let last = last">
+        <a
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-item">
+            <ng-icon [name]="item.icon"></ng-icon>
+            <span class="label">{{ item.label }}</span>
+        </a>
+        <div *ngIf="!last" class="separator"></div>
+    </ng-container>
+</nav>
