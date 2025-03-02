@@ -1,0 +1,40 @@
+<section class="sidebar">
+    <img class="img" ngSrc="/logo.svg" alt="Logo Notes" width="95" height="28" priority />
+
+    <nav class="navigation">
+        <ul>
+            <li
+                *ngFor="let item of menuItems"
+                [routerLink]="item.link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <div class="left">
+                    <ng-icon [name]="item.icon"></ng-icon>
+                    <span class="label">{{ item.label }}</span>
+                </div>
+                <svg
+                    *ngIf="isActive(item.link)"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none">
+                    <g clip-path="url(#clip0_2461_3528)">
+                        <path
+                            d="M1 1L5 5L1 9"
+                            stroke="#0E121B"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2461_3528">
+                            <rect width="6" height="10" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </li>
+        </ul>
+    </nav>
+    <div class="separator"></div>
+</section>
