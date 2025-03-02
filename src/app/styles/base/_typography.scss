@@ -1,0 +1,26 @@
+@use '../abstracts/mixins' as mixins;
+
+h1 {
+    @include mixins.text-style('h1');
+}
+
+h2 {
+    @include mixins.text-style('h2');
+}
+
+h3 {
+    @include mixins.text-style('h3');
+}
+
+h4 {
+    @include mixins.text-style('h4');
+}
+
+p {
+    @include mixins.text-style('body-md');
+}
+
+span,
+a {
+    @include mixins.text-style('body-sm');
+}

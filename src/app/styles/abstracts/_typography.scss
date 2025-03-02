@@ -1,0 +1,47 @@
+$font-family-heading: 'Work Sans', sans-serif;
+$font-family-text: 'Source Sans Pro', sans-serif;
+
+$text-presets: (
+    h1: (
+        24px,
+        120%,
+        -0.5px,
+        700,
+        $font-family-heading,
+    ),
+    h2: (
+        20px,
+        120%,
+        -0.5px,
+        700,
+        $font-family-heading,
+    ),
+    h3: (
+        16px,
+        120%,
+        -0.3px,
+        600,
+        $font-family-heading,
+    ),
+    h4: (
+        14px,
+        120%,
+        -0.2px,
+        500,
+        $font-family-heading,
+    ),
+    body-md: (
+        14px,
+        120%,
+        -0.2px,
+        400,
+        $font-family-text,
+    ),
+    body-sm: (
+        12px,
+        120%,
+        -0.2px,
+        400,
+        $font-family-text,
+    ),
+);

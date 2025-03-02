@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'sass:list';
+@use '../abstracts/typography' as vars;
+
+@mixin text-style($preset) {
+    $values: map.get(vars.$text-presets, $preset);
+
+    @if $values {
+        font-size: list.nth($values, 1);
+        line-height: list.nth($values, 2);
+        letter-spacing: list.nth($values, 3);
+        font-weight: list.nth($values, 4);
+        font-family: list.nth($values, 5);
+    } @else {
+        @warn "Le preset `#{$preset}` n'existe pas.";
+    }
+}

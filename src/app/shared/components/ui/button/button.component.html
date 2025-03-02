@@ -1,0 +1,7 @@
+<button [attr.type]="type" [disabled]="disabled" [ngClass]="buttonClasses">
+    <img *ngIf="iconLeft" class="icon-left" width="24" height="24" [ngSrc]="iconLeft" alt="Left Icon" />
+
+    <ng-content></ng-content>
+
+    <img *ngIf="iconRight" class="icon-right" width="24" height="24" [ngSrc]="iconRight" alt="Right Icon" />
+</button>

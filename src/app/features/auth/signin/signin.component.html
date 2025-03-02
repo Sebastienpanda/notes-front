@@ -1,0 +1,65 @@
+<section class="section">
+    <div class="signin">
+        <img class="img" ngSrc="/logo.svg" alt="Logo Notes" width="95" height="28" priority />
+        <div class="sub-header">
+            <h1>Welcome to Note</h1>
+            <p>Please log in to continue</p>
+        </div>
+        <div class="form-wrapper">
+            <form [formGroup]="form" class="form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="email" class="label">Email Address</label>
+                    <div class="input-wrapper">
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="email@example.com"
+                            autocomplete="email"
+                            formControlName="email"
+                            class="input-field" />
+                    </div>
+                    <span
+                        class="error-message"
+                        [ngClass]="{ visible: form.get('email')?.invalid && form.get('email')?.touched }">
+                        <ng-icon name="bootstrapInfoCircle" class="error-icon"></ng-icon>
+                        {{ form.get('email')?.hasError('required') ? 'Email required' : 'Please enter a valid email' }}
+                    </span>
+                </div>
+                <div class="form-group">
+                    <div class="password-group">
+                        <label for="password" class="label">Password</label>
+                        <a routerLink="/auth/forgot-password" class="forgot-password">Forgot</a>
+                    </div>
+                    <div class="input-wrapper">
+                        <input
+                            id="password"
+                            name="password"
+                            [type]="showPassword ? 'text' : 'password'"
+                            placeholder=""
+                            autocomplete="current-password"
+                            formControlName="password"
+                            class="input-field" />
+                        <button type="button" class="input-icon" (click)="togglePasswordVisibility()">
+                            <ng-icon *ngIf="showPassword; else hideIcon" name="bootstrapEyeSlash"></ng-icon>
+                            <ng-template #hideIcon>
+                                <ng-icon name="bootstrapEye"></ng-icon>
+                            </ng-template>
+                        </button>
+                    </div>
+                    <span
+                        class="error-message"
+                        [ngClass]="{
+                            visible: form.get('password')?.hasError('required') && form.get('password')?.touched,
+                        }">
+                        <ng-icon name="bootstrapInfoCircle" class="error-icon"></ng-icon>
+                        Password required
+                    </span>
+                </div>
+                <div class="form-btn">
+                    <app-button type="submit" variant="primary" [disabled]="form.invalid">Login</app-button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
