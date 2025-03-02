@@ -7,7 +7,7 @@ export const routes: Routes = [
         component: HomeComponent,
     },
     {
-        path: 'signin',
+        path: 'connect',
         loadChildren: () => import('./features/auth/signin/lazy.route').then(m => m.routes),
     },
 ];
