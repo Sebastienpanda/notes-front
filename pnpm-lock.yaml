@@ -11,6 +11,9 @@ importers:
       '@angular/animations':
         specifier: ^19.1.0
         version: 19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))
+      '@angular/cdk':
+        specifier: ^19.2.1
+        version: 19.2.1(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
       '@angular/common':
         specifier: ^19.1.0
         version: 19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
@@ -41,6 +44,9 @@ importers:
       '@ng-icons/core':
         specifier: ^30.3.0
         version: 30.3.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -252,6 +258,13 @@ packages:
         optional: true
       tailwindcss:
         optional: true
+
+  '@angular/cdk@19.2.1':
+    resolution: {integrity: sha512-j7dg18PJIbyeU4DTko3vIK3M2OuUv3H0ZViNddOaLlGN5X93cq4QCGcNhcGm3x3r5rUr/AaexYu+KHMyN8PwmA==}
+    peerDependencies:
+      '@angular/common': ^19.0.0 || ^20.0.0
+      '@angular/core': ^19.0.0 || ^20.0.0
+      rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/cli@19.1.8':
     resolution: {integrity: sha512-JmdLj8110DNWaxL03K7I06+nLyBfXgiIqYyrQx5QO9AodGkKHK5rE+7VD8MjZhUymua57HToD0oHaQgThJwTJQ==}
@@ -2309,6 +2322,9 @@ packages:
   date-format@4.0.14:
     resolution: {integrity: sha512-39BOQLs9ZjKh0/patS9nrT8wc3ioX3/eA/zgbKNopnF2wCqJEoxywwwElATYvRsXdnOxA/OQeQoFZ3rFjVajhg==}
     engines: {node: '>=4.0'}
+
+  dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -4842,6 +4858,15 @@ snapshots:
       - tsx
       - yaml
 
+  '@angular/cdk@19.2.1(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      '@angular/core': 19.2.0(rxjs@7.8.2)(zone.js@0.15.0)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+    optionalDependencies:
+      parse5: 7.2.1
+
   '@angular/cli@19.1.8(@types/node@22.13.5)(chokidar@4.0.3)':
     dependencies:
       '@angular-devkit/architect': 0.1901.8(chokidar@4.0.3)
@@ -7063,6 +7088,8 @@ snapshots:
   custom-event@1.0.1: {}
 
   date-format@4.0.14: {}
+
+  dayjs@1.11.13: {}
 
   debug@2.6.9:
     dependencies:
