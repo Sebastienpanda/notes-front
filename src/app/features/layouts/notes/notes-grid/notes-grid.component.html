@@ -1,0 +1,15 @@
+<div class="notes-grid" [class.empty]="notes.length === 0">
+    <aside class="sidebar">Ok sidebar</aside>
+    <header class="header">
+        <app-notes-header></app-notes-header>
+    </header>
+    <div class="main-content">
+        <section class="notes-list">
+            <app-notes-list></app-notes-list>
+        </section>
+
+        <section class="note-content" *ngIf="notes.length > 0">note content</section>
+
+        <section class="extra-content" *ngIf="notes.length > 0">extra content</section>
+    </div>
+</div>
