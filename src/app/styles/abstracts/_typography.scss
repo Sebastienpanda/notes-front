@@ -8,6 +8,7 @@ $text-presets: (
         -0.5px,
         700,
         $font-family-heading,
+        --neutral-950,
     ),
     h2: (
         20px,
@@ -15,6 +16,7 @@ $text-presets: (
         -0.5px,
         700,
         $font-family-heading,
+        --neutral-950,
     ),
     h3: (
         16px,
@@ -22,6 +24,7 @@ $text-presets: (
         -0.3px,
         600,
         $font-family-heading,
+        --neutral-950,
     ),
     h4: (
         14px,
@@ -29,6 +32,7 @@ $text-presets: (
         -0.2px,
         500,
         $font-family-heading,
+        --neutral-950,
     ),
     body-md: (
         14px,
@@ -36,6 +40,7 @@ $text-presets: (
         -0.2px,
         400,
         $font-family-text,
+        --neutral-800,
     ),
     body-sm: (
         12px,
@@ -43,5 +48,6 @@ $text-presets: (
         -0.2px,
         400,
         $font-family-text,
+        --neutral-800,
     ),
 );
