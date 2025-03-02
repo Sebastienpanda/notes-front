@@ -1,0 +1,33 @@
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: 1440px) {
+        display: block;
+    }
+
+    .empty-state {
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid var(--neutral-200);
+        background: var(--neutral-100);
+        color: var(--neutral-950);
+        margin-top: 24px;
+
+        @media screen and (min-width: 1440px) {
+            margin-top: 0;
+        }
+    }
+
+    .separator {
+        width: 100%;
+        height: 1px;
+        background-color: var(--neutral-200);
+        margin-top: 16px;
+
+        @media screen and (min-width: 1440px) {
+            display: none;
+        }
+    }
+}
