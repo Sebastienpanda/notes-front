@@ -2,73 +2,97 @@
     {
         "id": 1,
         "title": "React Performance Optimization",
+        "content": "Key performance tips for React:\n- Use React.memo wisely\n- Implement useCallback for event handlers\n- Leverage useMemo for expensive calculations\n- Virtual scrolling for long lists\n- Code splitting with React.lazy()",
         "tags": ["Dev", "React"],
-        "date": "2024-10-29"
+        "created_at": "2024-10-29T09:00:00Z",
+        "updated_at": "2024-10-29T15:30:00Z"
     },
     {
         "id": 2,
         "title": "Japan Travel Planning",
+        "content": "Trip Itinerary:\n- Tokyo (4 days): Shibuya, Harajuku, Akihabara\n- Kyoto (3 days): Temples, Traditional districts\n- Osaka (2 days): Street food paradise\n- Mount Fuji day trip\n\nBudget: ¥350,000\nJR Pass: 14 days",
         "tags": ["Travel", "Personal"],
-        "date": "2024-10-28"
+        "created_at": "2024-10-28T10:15:00Z",
+        "updated_at": "2024-10-28T16:20:00Z"
     },
     {
         "id": 3,
         "title": "Favorite Pasta Recipes",
+        "content": "1. Classic Carbonara:\n- Eggs, Pecorino, Guanciale\n- Black pepper, NO cream!\n\n2. Pesto alla Genovese:\n- Fresh basil\n- Pine nuts\n- Parmesan\n- Olive oil\n\n3. Arrabbiata:\n- Spicy tomato sauce\n- Garlic, Chili",
         "tags": ["Cooking", "Recipes"],
-        "date": "2024-10-27"
+        "created_at": "2024-10-27T14:00:00Z",
+        "updated_at": "2024-10-27T19:45:00Z"
     },
     {
         "id": 4,
         "title": "Weekly Workout Plan",
-        "tags": ["Dev", "React"],
-        "date": "2024-10-25"
+        "content": "Monday: Upper Body\n- Bench Press 4x8\n- Pull-ups 3x10\n- Shoulder Press 3x12\n\nWednesday: Lower Body\n- Squats 4x8\n- Deadlifts 3x8\n\nFriday: Full Body\n- Circuit Training\n- HIIT 20 min",
+        "tags": ["Health", "Fitness"],
+        "created_at": "2024-10-25T08:00:00Z",
+        "updated_at": "2024-10-25T20:15:00Z"
     },
     {
         "id": 5,
         "title": "Meal Prep Ideas",
+        "content": "Week's Menu:\n1. Chicken & Rice Bowls\n2. Quinoa Salads\n3. Overnight Oats\n4. Turkey Wraps\n\nGrocery List:\n- Proteins\n- Whole grains\n- Fresh vegetables\n- Healthy snacks",
         "tags": ["Cooking", "Health", "Recipes"],
-        "date": "2024-10-12"
+        "created_at": "2024-10-12T11:30:00Z",
+        "updated_at": "2024-10-12T18:45:00Z"
     },
     {
         "id": 6,
         "title": "Reading List",
+        "content": "Technical Books:\n1. Clean Code - Robert Martin\n2. Design Patterns - GOF\n3. Pragmatic Programmer\n\nPersonal Development:\n1. Atomic Habits\n2. Deep Work\n3. The Psychology of Money",
         "tags": ["Personal", "Dev"],
-        "date": "2024-10-05"
+        "created_at": "2024-10-05T15:20:00Z",
+        "updated_at": "2024-10-05T21:00:00Z"
     },
     {
         "id": 7,
         "title": "React Performance Optimization",
+        "content": "Advanced Topics:\n1. State Management\n- Redux vs Context\n- Recoil basics\n\n2. Code Splitting\n- Dynamic imports\n- Route-based splitting\n\n3. Rendering Optimization\n- useCallback scenarios\n- memo patterns",
         "tags": ["Dev", "React"],
-        "date": "2024-10-29"
+        "created_at": "2024-10-29T13:00:00Z",
+        "updated_at": "2024-10-29T17:30:00Z"
     },
     {
         "id": 8,
         "title": "Japan Travel Planning",
+        "content": "Accommodation:\n- Tokyo: Shinjuku APA Hotel\n- Kyoto: Traditional Ryokan\n- Osaka: Dotonbori Hotel\n\nTransport:\n- Airport transfers\n- JR Pass activation\n- Local IC card",
         "tags": ["Travel", "Personal"],
-        "date": "2024-10-28"
+        "created_at": "2024-10-28T09:00:00Z",
+        "updated_at": "2024-10-28T14:30:00Z"
     },
     {
         "id": 9,
         "title": "Favorite Pasta Recipes",
+        "content": "Quick Recipes:\n1. Cacio e Pepe\n- Pecorino Romano\n- Black pepper\n- Pasta water\n\n2. Aglio e Olio\n- Garlic\n- Olive oil\n- Red pepper flakes",
         "tags": ["Cooking", "Recipes"],
-        "date": "2024-10-27"
+        "created_at": "2024-10-27T16:00:00Z",
+        "updated_at": "2024-10-27T20:15:00Z"
     },
     {
         "id": 10,
         "title": "Weekly Workout Plan",
+        "content": "Core Exercises:\n1. Planks 3x60s\n2. Russian Twists 3x20\n3. Leg Raises 3x15\n\nCardio:\n- Running 5km\n- Jump rope 10min\n- Burpees 50 reps",
         "tags": ["Dev", "React"],
-        "date": "2024-10-25"
+        "created_at": "2024-10-25T11:00:00Z",
+        "updated_at": "2024-10-25T16:45:00Z"
     },
     {
         "id": 11,
         "title": "Meal Prep Ideas",
+        "content": "Healthy Snacks:\n1. Mixed nuts\n2. Greek yogurt parfait\n3. Apple & peanut butter\n4. Protein balls\n\nPrep Tips:\n- Use glass containers\n- Prep vegetables first\n- Label everything",
         "tags": ["Cooking", "Health", "Recipes"],
-        "date": "2024-10-12"
+        "created_at": "2024-10-12T10:00:00Z",
+        "updated_at": "2024-10-12T15:30:00Z"
     },
     {
         "id": 12,
         "title": "Reading List",
+        "content": "Current Books:\n1. The Pragmatic Programmer\n2. System Design Interview\n3. TypeScript Deep Dive\n\nNext Up:\n1. Domain-Driven Design\n2. Microservices Patterns\n3. Cloud Native Patterns",
         "tags": ["Personal", "Dev"],
-        "date": "2024-10-05"
+        "created_at": "2024-10-05T12:00:00Z",
+        "updated_at": "2024-10-05T18:45:00Z"
     }
 ]

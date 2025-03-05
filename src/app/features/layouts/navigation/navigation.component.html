@@ -5,7 +5,7 @@
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
             class="nav-item">
-            <ng-icon [name]="item.icon"></ng-icon>
+            <lucide-icon size="24" color="#525866" [name]="item.icon"></lucide-icon>
             <span class="label">{{ item.label }}</span>
         </a>
         <div *ngIf="!last" class="separator"></div>

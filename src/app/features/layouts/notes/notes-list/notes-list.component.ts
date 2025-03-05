@@ -15,6 +15,7 @@ import { FormatDatePipe } from '@shared/pipes/format-date.pipe';
 export class NotesListComponent {
     @Input() notes: Note[] = [];
     @Input() activeNote: Note | null = null;
+    @Input() isMobileOrTablet = false;
     @Output() noteSelected = new EventEmitter<Note>();
 
     trackById(index: number, note: { id: number }): number {

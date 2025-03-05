@@ -1,29 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
-import {
-    bootstrapArchive,
-    bootstrapGear,
-    bootstrapHouse,
-    bootstrapSearch,
-    bootstrapTag,
-} from '@ng-icons/bootstrap-icons';
-import { NgIcon, provideIcons } from '@ng-icons/core';
+import { House, Search, Archive, Tags, LucideAngularModule, Settings } from 'lucide-angular';
 
 @Component({
-    selector: 'app-navigation',
     standalone: true,
+    selector: 'app-navigation',
     templateUrl: './navigation.component.html',
     styleUrl: './navigation.component.scss',
-    imports: [RouterLink, NgIcon, CommonModule, RouterModule],
-    viewProviders: [provideIcons({ bootstrapHouse, bootstrapSearch, bootstrapArchive, bootstrapTag, bootstrapGear })],
+    imports: [RouterLink, CommonModule, RouterModule, LucideAngularModule],
 })
 export class NavigationComponent {
+    readonly HouseDoorIcon = House;
+    readonly SearchIcon = Search;
+    readonly ArchiveIcon = Archive;
+    readonly TagsIcon = Tags;
+    readonly SettingIcon = Settings;
+
     navItems = [
-        { icon: 'bootstrapHouse', label: 'Home', route: '/' },
-        { icon: 'bootstrapSearch', label: 'Search', route: '/search' },
-        { icon: 'bootstrapArchive', label: 'Archived', route: '/archived' },
-        { icon: 'bootstrapTag', label: 'Tags', route: '/tags' },
-        { icon: 'bootstrapGear', label: 'Settings', route: '/settings' },
+        { icon: this.HouseDoorIcon, label: 'Home', route: '/' },
+        { icon: this.SearchIcon, label: 'Search', route: '/search' },
+        { icon: this.ArchiveIcon, label: 'Archived', route: '/archived' },
+        { icon: this.TagsIcon, label: 'Tags', route: '/tags' },
+        { icon: this.SettingIcon, label: 'Settings', route: '/settings' },
     ];
 }

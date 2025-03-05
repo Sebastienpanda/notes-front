@@ -9,6 +9,7 @@
     padding: 12px 16px;
     box-shadow: 0px -4px 6px 0px rgba(240, 240, 240, 0.6);
     border-top: 1px solid var(--neutral-200);
+    z-index: 1;
 
     @media screen and (min-width: 768px) {
         padding: 12px 32px;
@@ -34,17 +35,8 @@
             color: var(--blue-500);
         }
 
-        ng-icon {
-            font-size: 24px;
-            color: var(--neutral-600);
-        }
-
         &.active {
             background-color: var(--blue-50);
-
-            ng-icon {
-                color: var(--blue-500);
-            }
 
             .label {
                 color: var(--blue-500);

@@ -2,25 +2,22 @@
     <img ngSrc="/logo.svg" alt="Logo Notes" width="95" height="28" priority />
 </header>
 
-<section *ngIf="isMobileOrTablet()" class="section-notes">
-    <h1>All Notes</h1>
-    <div *ngIf="notes.length === 0">
-        <app-empty-state
-            message="You don’t have any notes yet. Start a new note to capture your thoughts and ideas."
-            buttonText="Create Note"
-            icon="file-text">
-        </app-empty-state>
-    </div>
-    <div *ngFor="let note of notes; let last = last; trackBy: trackById" class="note">
-        <div class="child">
-            <h3>{{ note.title }}</h3>
-            <div class="tags">
-                <span *ngFor="let tag of note.tags" class="tag">{{ tag }}</span>
-            </div>
-            <p class="date">{{ note.date | formatDate }}</p>
+<section *ngIf="isMobileOrTablet()" class="mobile-layout">
+    <div *ngIf="!selectedNote">
+        <div class="header-padding" [ngClass]="{ 'fixed-header': notes.length > 0 }">
+            <h1>All Notes</h1>
         </div>
-
-        <div *ngIf="!last" class="separator"></div>
+        <div class="scrollable-content">
+            <app-notes-list
+                [notes]="notes"
+                [activeNote]="selectedNote"
+                (noteSelected)="onSelect($event)"
+                [isMobileOrTablet]="isMobileOrTablet()">
+            </app-notes-list>
+        </div>
     </div>
+
+    <app-note-content [note]="selectedNote" *ngIf="selectedNote" (goBack)="selectedNote = null"></app-note-content>
 </section>
+
 <app-notes-grid *ngIf="!isMobileOrTablet()"></app-notes-grid>

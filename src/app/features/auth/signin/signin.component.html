@@ -22,7 +22,7 @@
                     <span
                         class="error-message"
                         [ngClass]="{ visible: form.get('email')?.invalid && form.get('email')?.touched }">
-                        <ng-icon name="bootstrapInfoCircle" class="error-icon"></ng-icon>
+                        <i class="bi bi-info-circle" class="error-icon"></i>
                         {{ form.get('email')?.hasError('required') ? 'Email required' : 'Please enter a valid email' }}
                     </span>
                 </div>
@@ -41,9 +41,9 @@
                             formControlName="password"
                             class="input-field" />
                         <button type="button" class="input-icon" (click)="togglePasswordVisibility()">
-                            <ng-icon *ngIf="showPassword; else hideIcon" name="bootstrapEyeSlash"></ng-icon>
+                            <i *ngIf="showPassword; else hideIcon" class="bi bi-eye-slash"></i>
                             <ng-template #hideIcon>
-                                <ng-icon name="bootstrapEye"></ng-icon>
+                                <i class="bi bi-eye"></i>
                             </ng-template>
                         </button>
                     </div>
@@ -52,7 +52,7 @@
                         [ngClass]="{
                             visible: form.get('password')?.hasError('required') && form.get('password')?.touched,
                         }">
-                        <ng-icon name="bootstrapInfoCircle" class="error-icon"></ng-icon>
+                        <i class="bi bi-info-circle" class="error-icon"></i>
                         Password required
                     </span>
                 </div>

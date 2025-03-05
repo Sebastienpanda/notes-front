@@ -1,7 +1,28 @@
 <div class="note-content-wrapper" *ngIf="note">
-    <h2>{{ note.title }}</h2>
-    <div class="tags">
-        <span *ngFor="let tag of note.tags" class="tag">{{ tag }}</span>
+    <div class="topbar">
+        <button (click)="onGoBack()" (keyup.enter)="onGoBack()" class="back-button" tabindex="0">
+            <lucide-icon size="18" color="#525866" [name]="ChevronLeftIcon"></lucide-icon>
+            <span>Go back</span>
+        </button>
+        <div class="right">
+            <lucide-icon size="18" color="#525866" [name]="TrashIcon"></lucide-icon>
+            <lucide-icon size="18" color="#525866" [name]="ArchiveIcon"></lucide-icon>
+            <button>Cancel</button>
+            <button class="save">Save Note</button>
+        </div>
     </div>
-    <div class="content"></div>
+    <div class="content">
+        <h1>{{ note.title }}</h1>
+        <div class="subtopbar">
+          <div class="tagsParent">
+              <div class="tagsParent__tag">
+                  <lucide-icon color="#2B303B" size="16" [name]="TagIcon"></lucide-icon>
+                  <span>Tags</span>
+              </div>
+              <ng-container *ngFor="let tag of note.tags; let isLast = last">
+                  <span>{{ tag }}</span><span *ngIf="!isLast">, </span>
+              </ng-container>
+          </div>
+        </div>
+    </div>
 </div>

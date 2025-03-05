@@ -2,15 +2,12 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { bootstrapEye, bootstrapEyeSlash, bootstrapInfoCircle } from '@ng-icons/bootstrap-icons';
-import { NgIcon, provideIcons } from '@ng-icons/core';
 import { ButtonComponent } from '@shared/components/ui/button/button.component';
 
 @Component({
     selector: 'app-signin',
     standalone: true,
-    imports: [CommonModule, ReactiveFormsModule, NgOptimizedImage, RouterLink, ButtonComponent, NgIcon],
-    viewProviders: [provideIcons({ bootstrapEye, bootstrapEyeSlash, bootstrapInfoCircle })],
+    imports: [CommonModule, ReactiveFormsModule, NgOptimizedImage, RouterLink, ButtonComponent],
     templateUrl: './signin.component.html',
     styleUrl: './signin.component.scss',
 })

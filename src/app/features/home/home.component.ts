@@ -2,16 +2,16 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, OnInit, signal } from '@angular/core';
 import { Note, NoteService } from '@core/services/note.service';
+import { NoteContentComponent } from '@features/layouts/notes/note-content/note-content.component';
 import { NotesGridComponent } from '@features/layouts/notes/notes-grid/notes-grid.component';
-import { EmptyStateComponent } from '@shared/components/emptyState/empty-state.component';
-import { FormatDatePipe } from '@shared/pipes/format-date.pipe';
+import { NotesListComponent } from '@features/layouts/notes/notes-list/notes-list.component';
 
 @Component({
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
-    imports: [CommonModule, NgOptimizedImage, FormatDatePipe, EmptyStateComponent, NotesGridComponent],
+    imports: [CommonModule, NgOptimizedImage, NotesGridComponent, NotesListComponent, NoteContentComponent],
 })
 export class HomeComponent implements OnInit {
     constructor(
@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
     }
 
     notes: Note[] = [];
+    selectedNote: Note | null = null;
 
     isMobileOrTablet = signal(false);
 
@@ -35,5 +36,9 @@ export class HomeComponent implements OnInit {
 
     trackById(index: number, note: { id: number }): number {
         return note.id;
+    }
+
+    onSelect(note: Note) {
+        this.selectedNote = note;
     }
 }

@@ -1,5 +1,5 @@
 <section class="section-notes-list">
-    <div class="button-wrapper">
+    <div class="button-wrapper" *ngIf="!isMobileOrTablet">
         <app-button type="button" variant="primary">+ Create new note</app-button>
     </div>
     <div class="notes-container">
@@ -20,7 +20,7 @@
                 <div class="tags">
                     <span *ngFor="let tag of note.tags" class="tag">{{ tag }}</span>
                 </div>
-                <p class="date">{{ note.date | formatDate }}</p>
+                <p class="created_at">{{ note.created_at | formatDate }}</p>
             </div>
             <div *ngIf="!last" class="separator"></div>
         </div>

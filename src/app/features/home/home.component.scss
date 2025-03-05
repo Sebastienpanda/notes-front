@@ -6,51 +6,29 @@
     }
 }
 
-.section-notes {
-    padding: 20px 16px;
+.mobile-layout {
     background-color: var(--neutral-0);
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    height: 100dvh;
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 
-    @media screen and (min-width: 768px) {
-        padding: 24px 32px;
-        border-top-right-radius: 16px;
-        border-top-left-radius: 16px;
+    .header-padding {
+        padding: 20px 16px 16px;
     }
 
-    .note {
-        padding: 16px 0;
+    .fixed-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px -4px 6px 0px rgba(240, 240, 240, 0.6);
+        border-bottom: 1px solid var(--neutral-200);
+    }
 
-        .child {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-
-            .tags {
-                display: flex;
-                gap: 4px;
-            }
-
-            .tag {
-                background-color: var(--neutral-200);
-                padding: 4px 8px;
-                border-radius: 4px;
-                color: var(--neutral-950);
-            }
-
-            .date {
-                color: var(--neutral-700);
-                font-size: 12px;
-                line-height: 120%;
-                letter-spacing: -0.2px;
-            }
-        }
-
-        .separator {
-            height: 1px;
-            background-color: var(--neutral-200);
-            margin-top: 12px;
-        }
+    .scrollable-content {
+        padding-top: 16px;
     }
 }
